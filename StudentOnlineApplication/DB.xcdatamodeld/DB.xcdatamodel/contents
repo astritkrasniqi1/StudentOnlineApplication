@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="21H1015" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Aplikimi" representedClassName="Aplikimi" syncable="YES" codeGenerationType="category">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="faculty" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="grade" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="parentname" optional="YES" attributeType="String"/>
+        <relationship name="userat" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Useri" inverseName="aplikimi" inverseEntity="Useri"/>
+    </entity>
+    <entity name="Useri" representedClassName="Useri" syncable="YES" codeGenerationType="category">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String"/>
+        <relationship name="aplikimi" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Aplikimi" inverseName="userat" inverseEntity="Aplikimi"/>
+    </entity>
+    <elements>
+        <element name="Aplikimi" positionX="-54" positionY="36" width="128" height="134"/>
+        <element name="Useri" positionX="-63" positionY="-18" width="128" height="134"/>
+    </elements>
+</model>
