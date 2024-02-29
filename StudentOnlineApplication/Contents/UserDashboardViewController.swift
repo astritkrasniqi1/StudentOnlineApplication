@@ -11,6 +11,8 @@ import CoreData
 
 class UserDashboardViewController: UIViewController {
 
+    @IBOutlet weak var LogOutBtn: UIButton!
+    @IBOutlet weak var aplikoButton: UIButton!
     @IBOutlet weak var txtFakulteti: UITextField!
     @IBOutlet weak var txtSuksesi: UITextField!
     @IBOutlet weak var txtGjinia: UITextField!
@@ -21,8 +23,8 @@ class UserDashboardViewController: UIViewController {
     @IBOutlet weak var txtEmri: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        aplikoButton.layer.cornerRadius = 10
+        LogOutBtn.layer.cornerRadius = 10        // Do any additional setup after loading the view.
     }
     func createApplication(emri: String, mbiemri: String, emriPrindit: String, nrPersonal: String, komuna: String,gjinia: String, suksesi: Double, fakulteti: String){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -39,6 +41,7 @@ class UserDashboardViewController: UIViewController {
         newUser.grade = suksesi
         newUser.faculty = fakulteti
         newUser.id = nrPersonal
+      
         
         do {
             try managedContext.save()
@@ -49,6 +52,11 @@ class UserDashboardViewController: UIViewController {
     }
     
 
+    @IBAction func logOutBtn(_ sender: Any) {
+        if let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                       self.navigationController?.pushViewController(loginViewController, animated: true)
+               }
+    }
     @IBAction func aplikoForm(_ sender: UIButton) {
        guard let emri = txtEmri.text, !emri.isEmpty,
              let emriPrindit = txtEmriPrindit.text, !emriPrindit.isEmpty,

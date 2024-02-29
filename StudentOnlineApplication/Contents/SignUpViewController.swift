@@ -11,16 +11,24 @@ import CoreData
 class ViewController: UIViewController {
     
     @IBOutlet weak var passwordMatchError: UILabel!
+    @IBOutlet weak var RegisterBtn: UIButton!
     @IBOutlet weak var txtTelefoni: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtMbiemri: UITextField!
+    @IBOutlet weak var GoToLogInBtn: UIButton!
     @IBOutlet weak var txtEmri: UITextField!
-  
+    
+  override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      // Hide the navigation bar
+      navigationController?.setNavigationBarHidden(true, animated: animated)
+  }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        RegisterBtn.layer.cornerRadius = 10
+        view.backgroundColor = UIColor.lightGray
     }
     func createUser(emri: String, mbiemri: String, password: String, telefoni: String, email: String,role: Int16){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -43,9 +51,15 @@ class ViewController: UIViewController {
             showAlert(message: "Something went wrong. Try again!")
         }
     }
-
-
-    @IBAction func submitForm(_ sender: UIButton) {
+    
+    @IBAction func GoToLogIn(_ sender: Any) {
+        if let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                self.navigationController?.pushViewController(loginViewController, animated: true)
+        }
+        
+    }
+    
+     @IBAction func submitForm(_ sender: UIButton) {
       guard let name = txtEmri.text, !name.isEmpty,
                 let surname = txtMbiemri.text, !surname.isEmpty,
                 let password = txtPassword.text, !password.isEmpty,
@@ -55,6 +69,7 @@ class ViewController: UIViewController {
                   showAlert(message: "Shtyp te gjitha te dhenat")
                   return
           }
+
         guard password == confirmPassword else {
             passwordMatchError.text = "Passwords do not match"
             passwordMatchError.isHidden = false
