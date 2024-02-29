@@ -12,14 +12,14 @@
 		DA3059192B8ED2C000A4F16E /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3059182B8ED2C000A4F16E /* UserDashboardViewController.swift */; };
 		DA46D34D2B8E9F5200076EC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D34C2B8E9F5200076EC2 /* AppDelegate.swift */; };
 		DA46D34F2B8E9F5200076EC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D34E2B8E9F5200076EC2 /* SceneDelegate.swift */; };
-		DA46D3512B8E9F5200076EC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D3502B8E9F5200076EC2 /* ViewController.swift */; };
+		DA46D3512B8E9F5200076EC2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D3502B8E9F5200076EC2 /* SignUpViewController.swift */; };
 		DA46D3542B8E9F5200076EC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA46D3522B8E9F5200076EC2 /* Main.storyboard */; };
 		DA46D3562B8E9F5300076EC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA46D3552B8E9F5300076EC2 /* Assets.xcassets */; };
 		DA46D3592B8E9F5300076EC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA46D3572B8E9F5300076EC2 /* LaunchScreen.storyboard */; };
 		DA46D3642B8E9F5300076EC2 /* StudentOnlineApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D3632B8E9F5300076EC2 /* StudentOnlineApplicationTests.swift */; };
 		DA46D36F2B8E9F5300076EC2 /* StudentOnlineApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46D36E2B8E9F5300076EC2 /* StudentOnlineApplicationUITests.swift */; };
-		DAFC13212B8F8B4700B69E9C /* Aplikimi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC131D2B8F8B4700B69E9C /* Aplikimi+CoreDataClass.swift */; };
-		DAFC13232B8F8B4700B69E9C /* Useri+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC131F2B8F8B4700B69E9C /* Useri+CoreDataClass.swift */; };
+		DABDB69C2B9008D00021BE77 /* Aplikimi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB6982B9008D00021BE77 /* Aplikimi+CoreDataClass.swift */; };
+		DABDB69E2B9008D00021BE77 /* Useri+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDB69A2B9008D00021BE77 /* Useri+CoreDataClass.swift */; };
 		DAFC13262B8F918900B69E9C /* AdminDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC13252B8F918900B69E9C /* AdminDashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		DA46D3492B8E9F5100076EC2 /* StudentOnlineApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentOnlineApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA46D34C2B8E9F5200076EC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA46D34E2B8E9F5200076EC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA46D3502B8E9F5200076EC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA46D3502B8E9F5200076EC2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DA46D3532B8E9F5200076EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA46D3552B8E9F5300076EC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA46D3582B8E9F5300076EC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,8 +58,8 @@
 		DA46D36A2B8E9F5300076EC2 /* StudentOnlineApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentOnlineApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA46D36E2B8E9F5300076EC2 /* StudentOnlineApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOnlineApplicationUITests.swift; sourceTree = "<group>"; };
 		DA46D3702B8E9F5300076EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAFC131D2B8F8B4700B69E9C /* Aplikimi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aplikimi+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DAFC131F2B8F8B4700B69E9C /* Useri+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Useri+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DABDB6982B9008D00021BE77 /* Aplikimi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aplikimi+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DABDB69A2B9008D00021BE77 /* Useri+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Useri+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DAFC13252B8F918900B69E9C /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,8 +143,8 @@
 		DA5783722B8F7844001305B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DAFC131D2B8F8B4700B69E9C /* Aplikimi+CoreDataClass.swift */,
-				DAFC131F2B8F8B4700B69E9C /* Useri+CoreDataClass.swift */,
+				DABDB6982B9008D00021BE77 /* Aplikimi+CoreDataClass.swift */,
+				DABDB69A2B9008D00021BE77 /* Useri+CoreDataClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			children = (
 				DA46D34E2B8E9F5200076EC2 /* SceneDelegate.swift */,
 				DA46D34C2B8E9F5200076EC2 /* AppDelegate.swift */,
-				DA46D3502B8E9F5200076EC2 /* ViewController.swift */,
+				DA46D3502B8E9F5200076EC2 /* SignUpViewController.swift */,
 				DA3059162B8EB5D500A4F16E /* LoginViewController.swift */,
 				DA3059182B8ED2C000A4F16E /* UserDashboardViewController.swift */,
 				DAFC13252B8F918900B69E9C /* AdminDashboardViewController.swift */,
@@ -316,14 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFC13262B8F918900B69E9C /* AdminDashboardViewController.swift in Sources */,
-				DAFC13232B8F8B4700B69E9C /* Useri+CoreDataClass.swift in Sources */,
 				DA3059172B8EB5D500A4F16E /* LoginViewController.swift in Sources */,
 				DA3059192B8ED2C000A4F16E /* UserDashboardViewController.swift in Sources */,
-				DA46D3512B8E9F5200076EC2 /* ViewController.swift in Sources */,
+				DABDB69C2B9008D00021BE77 /* Aplikimi+CoreDataClass.swift in Sources */,
+				DA46D3512B8E9F5200076EC2 /* SignUpViewController.swift in Sources */,
 				DA064D682B8F6478009D5C2B /* DB.xcdatamodeld in Sources */,
 				DA46D34D2B8E9F5200076EC2 /* AppDelegate.swift in Sources */,
+				DABDB69E2B9008D00021BE77 /* Useri+CoreDataClass.swift in Sources */,
 				DA46D34F2B8E9F5200076EC2 /* SceneDelegate.swift in Sources */,
-				DAFC13212B8F8B4700B69E9C /* Aplikimi+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

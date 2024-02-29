@@ -69,12 +69,20 @@
                                 <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dh-pE-4OA">
+                                <rect key="frame" x="40" y="368" width="196" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="yA9-y6-ER2"/>
                     <connections>
+                        <outlet property="passwordMatchError" destination="5dh-pE-4OA" id="lEY-5H-UGT"/>
                         <outlet property="txtConfirmPassword" destination="gB1-AL-zbB" id="tiK-Ac-QvI"/>
                         <outlet property="txtEmail" destination="AJ5-wY-st4" id="td0-8w-csh"/>
                         <outlet property="txtEmri" destination="lTf-bJ-0Fs" id="2QR-YP-ZE4"/>
@@ -184,7 +192,7 @@
         <!--Login View Controller-->
         <scene sceneID="7P7-g7-hnl">
             <objects>
-                <viewController storyboardIdentifier="toLoginViewController" id="ezE-wh-UsH" customClass="LoginViewController" customModule="StudentOnlineApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="ezE-wh-UsH" customClass="LoginViewController" customModule="StudentOnlineApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o7s-YB-gqa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

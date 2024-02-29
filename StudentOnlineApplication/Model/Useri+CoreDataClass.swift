@@ -2,7 +2,7 @@
 //  Useri+CoreDataClass.swift
 //  StudentOnlineApplication
 //
-//  Created by THIS on 28.2.24.
+//  Created by THIS on 29.2.24.
 //  Copyright © 2024 THIS. All rights reserved.
 //
 //

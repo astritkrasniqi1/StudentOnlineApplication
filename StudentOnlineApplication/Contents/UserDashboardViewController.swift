@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class UserDashboardViewController: UIViewController {
 
@@ -23,6 +24,29 @@ class UserDashboardViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func createApplication(emri: String, mbiemri: String, emriPrindit: String, nrPersonal: String, komuna: String,gjinia: String, suksesi: Double, fakulteti: String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            showAlert(message: "Unable to fetch app delegate")
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let newUser = Aplikimi(context: managedContext)
+        newUser.name = emri
+        newUser.surname = mbiemri
+        newUser.parentname = emriPrindit
+        newUser.city = komuna
+        newUser.gender = gjinia
+        newUser.grade = suksesi
+        newUser.faculty = fakulteti
+        newUser.id = nrPersonal
+        
+        do {
+            try managedContext.save()
+            showAlert(message: "Aplikimi u krye me sukses")
+        } catch {
+            showAlert(message: "Something went wrong. Try again!")
+        }
+    }
     
 
     @IBAction func aplikoForm(_ sender: UIButton) {
@@ -32,11 +56,14 @@ class UserDashboardViewController: UIViewController {
              let id = txtID.text, !id.isEmpty,
              let komuna = txtKomuna.text, !komuna.isEmpty, // Comma added here
              let gjinia = txtGjinia.text, !gjinia.isEmpty,
-             let suksesi = txtSuksesi.text, !suksesi.isEmpty,
+             let suksesiString = txtSuksesi.text, !suksesiString.isEmpty,
+             let suksesi = Double(suksesiString),
              let fakulteti = txtFakulteti.text, !fakulteti.isEmpty else {
            showAlert(message: "Shtyp te dhenat")
            return
        }
+        createApplication(emri: emri, mbiemri: mbiemri, emriPrindit: emriPrindit, nrPersonal: id, komuna: komuna,gjinia: gjinia, suksesi: suksesi, fakulteti: fakulteti)
+        resetFields()
 
     }
     func showAlert(message: String) {
@@ -57,6 +84,17 @@ class UserDashboardViewController: UIViewController {
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    func resetFields(){
+        txtFakulteti.text = ""
+        txtEmri.text = ""
+        txtEmriPrindit.text = ""
+        txtMbiemri.text = ""
+        txtSuksesi.text = ""
+        txtID.text = ""
+        txtGjinia.text = ""
+        txtKomuna.text = ""
+        
     }
     
 

@@ -54,21 +54,22 @@ class LoginViewController: UIViewController {
             wrongPassword.textColor = UIColor(red: 235/255, green: 64/255, blue: 52/255, alpha: 1)
             return
         }
-      
-        if isValidLogin(typeEmail: emailText, typePassword: pwText){
-            UserDefaults.standard.set(emailText, forKey: "Email")
-            if let userDashboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserDashboardViewController") as? UserDashboardViewController {
-            self.navigationController?.pushViewController(userDashboardVC, animated: true)
-            
-            } else{
-                showAlert(message: "Kredencialet jane gabim")
-                wrongEmail.isHidden = true
-                wrongPassword.isHidden = true
-            }
-        }
         
-    }
-    func isValidLogin(typeEmail: String, typePassword: String) -> Bool {
+            
+             if isValidLogin(typeEmail: emailText, typePassword: pwText) {
+                    // Credentials are correct, navigate to the dashboard
+                    UserDefaults.standard.set(emailText, forKey: "Email")
+                    if let userDashboardVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserDashboardViewController") as? UserDashboardViewController {
+                        navigationController?.pushViewController(userDashboardVC, animated: true)
+                    }
+                } else {
+                    // Credentials are incorrect, show alert
+                    showAlert(message: "Kredencialet Jane gabim")
+                }
+            }
+        
+    
+   func isValidLogin(typeEmail: String, typePassword: String) -> Bool {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             return false
             }
@@ -87,6 +88,7 @@ class LoginViewController: UIViewController {
         return false
     }
 
+
  
     @IBAction func signupForm(_ sender: UIButton) {
     }
@@ -96,15 +98,7 @@ class LoginViewController: UIViewController {
           alert.addAction(okAction)
           present(alert, animated: true, completion: nil)
       }
-    func showAlertWithCompletion(message: String, completion: @escaping () -> Void) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            completion()
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
-    }
-    }
-    
+ 
     
 
+}
